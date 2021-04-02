@@ -5,9 +5,7 @@ public class EmployeePair {
 	private long employee1;
 	private long employee2;
 	private long workTogether;
-	
-	
-	
+
 	public EmployeePair(long employee1, long employee2) {
 		this.employee1 = employee1;
 		this.employee2 = employee2;
@@ -36,6 +34,7 @@ public class EmployeePair {
 	public void addWorkDays(long days) {
 		this.workTogether += days;
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -65,7 +64,5 @@ public class EmployeePair {
 	public String toString() {
 		return "Employees with id " + employee1 + " and " + employee2 + " worked together for " + workTogether + " days.";  
 	}
-	
-	
 	
 }

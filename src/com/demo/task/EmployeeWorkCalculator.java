@@ -1,8 +1,6 @@
 package com.demo.task;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -10,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeWorkCalculator {
-	
 	
 	public void sortByProjectId(ArrayList<Task> tasks) {
 		tasks.sort((t1,t2) ->  (int) (t1.getProjectId() - t2.getProjectId()));
