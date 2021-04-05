@@ -1,16 +1,33 @@
 package com.demo.task;
 
+
+/**
+ * 
+ * Class for handling a pair of employees and their work days.
+ * 
+ * @author Ahmet Ahmedov
+ *
+ */
 public class EmployeePair {
 
+	//Variable for first employee id
 	private long employee1;
+	
+	//Variable for second employee id
 	private long employee2;
+	
+	//Variable for common work days on projects.
 	private long workTogether;
 
+	
+	//Constructor
 	public EmployeePair(long employee1, long employee2) {
 		this.employee1 = employee1;
 		this.employee2 = employee2;
 		this.workTogether = 0;
 	}
+	
+	//Getters and setters.
 	
 	public long getWorkTogether() {
 		return workTogether;
@@ -31,6 +48,7 @@ public class EmployeePair {
 		this.employee2 = employee2;
 	}
 
+	//Method for adding days to this pair of employees.
 	public void addWorkDays(long days) {
 		this.workTogether += days;
 	}

@@ -2,13 +2,29 @@ package com.demo.task;
 
 import java.time.LocalDate;
 
-public class Task {
+/**
+ * 
+ * Class for handling tasks from the text file.
+ * 
+ * @author Ahmet Ahmedov
+ *
+ */
 
+public class Task {
+	
+	//Variable for employee ID
 	private long empId;
+	
+	//Variable for project ID
 	private long projectId;
+	
+	//Variable for starting date on project
 	private LocalDate dateFrom;
+	
+	//variable from finishing date on project
 	private LocalDate dateTo;
 	
+	//Creating new object of Task from a single line from text file.
 	public Task(String line) {
 		String result = line.replaceAll("\\s+", "");
 		String[] tokens = result.split(",");
@@ -24,6 +40,7 @@ public class Task {
 		}
 	}
 	
+	//Constructor
 	public Task(Long empId, Long projectId, LocalDate dateFrom, LocalDate dateTo) {
 		this.empId = empId;
 		this.projectId = projectId;
@@ -31,6 +48,8 @@ public class Task {
 		this.dateTo = dateTo;
 	}
 
+	//Getters and setters.
+	
 	public long getEmpId() {
 		return empId;
 	}
